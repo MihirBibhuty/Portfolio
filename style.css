@@ -5,7 +5,7 @@
     box-sizing: border-box;
 }
 
-h1{
+.header h1{
     /* color: white; */
     font-size: 5rem !important;
 }
@@ -385,7 +385,7 @@ nav{
     text-align: justify;
 }
 
-.content{
+.about .content{
     position: relative;
 }
 
@@ -455,7 +455,7 @@ nav{
     color: #ba4242;
 } */
 
-.buttonCV{
+.about .buttonCV{
     background-color: #d13333;
     color: #fff;
     border-radius: 10px;
@@ -465,7 +465,124 @@ nav{
     transition: all 0.4s ease-in-out;
 }
 
-.buttonCV:hover{
+.about .buttonCV:hover{
+    text-decoration: none;
+    background-color: transparent;
+    color: #d13333;
+    border: 2px solid #d13333;
+    box-shadow: 10px 10px 12px -4.5px #ba4242, inset 18px 20px 18px -9px #ba4242;
+    text-shadow: 0 0 4px #fff;
+}
+
+/* **************** About Ends **************** */
+
+
+
+
+/* **************** Skills Starts **************** */
+
+.skills{
+    /* margin-top: 60px;
+    margin-left: 120px; */
+    height: 100vh;
+    background-image: linear-gradient(54deg, rgba(5, 6, 26, 0.96) 38%, rgba(236, 140, 105, 0.95) 90%);
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 75%);
+}
+
+.skills h2{
+    text-align: center;
+    font-size: 3rem;
+    color: #fff;
+    /* font-weight: 600; */
+}
+
+.skills .des{
+    text-align: center;
+    margin-top: -12px;
+    color: rgb(112, 4, 4);
+    font-weight: 600;
+}
+
+.skills h1{
+    font-size: 1.9rem;
+    color: #fff;
+    margin-top: 15px;
+    /* font-weight: 600; */
+}
+
+.skills p{
+    font-size: 1.1rem;
+    color: #fff;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-right: 60px;
+    text-align: justify;
+}
+
+.skills .buttonCV{
+    background-color: #d13333;
+    color: #fff;
+    border-radius: 10px;
+    padding: 13px 25px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: all 0.4s ease-in-out;
+}
+
+.skills .buttonCV:hover{
+    text-decoration: none;
+    background-color: transparent;
+    color: #d13333;
+    border: 2px solid #d13333;
+    box-shadow: 10px 10px 12px -4.5px #ba4242, inset 18px 20px 18px -9px #ba4242;
+    /* text-shadow: 0 0 4px #fff; */
+}
+
+.skills .tag{
+    font-size: 1.2rem;
+}
+
+
+/* **************** Skills Ends **************** */
+
+
+
+/* **************** Contact Starts **************** */
+
+.contact{
+    margin-top: 60px;
+    height: 100vh;
+}
+
+.contact h2{
+    text-align: center;
+    font-size: 3rem;
+    /* font-weight: 600; */
+}
+
+.contact .des{
+    text-align: center;
+    margin-top: -12px;
+    color: rgb(165, 25, 25);
+    font-weight: 600;
+}
+
+.contact form{
+    margin-top: 80px;
+    margin-bottom: 30px;
+}
+
+.contact .buttonCV{
+    background-color: #d13333;
+    color: #fff;
+    border-radius: 10px;
+    padding: 10px 25px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: all 0.4s ease-in-out;
+}
+
+.contact .buttonCV:hover{
     text-decoration: none;
     background-color: transparent;
     color: #d13333;
@@ -475,7 +592,44 @@ nav{
 }
 
 
+/* **************** Contact Ends **************** */
 
 
-/* **************** About Ends **************** */
+
+
+
+
+
+
+/* .skills img{
+    height: 400px;
+}
+
+.skills .content{
+    display: flex;
+    align-items: center;
+    margin-top: 35px;
+}
+
+.skills .content div{
+    margin-left: 150px;
+}
+
+.skills .content h3{
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+.skills .content p{
+    margin: 25px 0;
+    font-size: 1.1rem;
+    text-align: justify;
+}
+
+.skills .content{
+    position: relative;
+} */
+
+
 
