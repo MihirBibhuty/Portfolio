@@ -1,0 +1,481 @@
+*{
+    margin: 0px;
+    padding: 0;
+    font-family: 'Caladea', serif;
+    box-sizing: border-box;
+}
+
+h1{
+    /* color: white; */
+    font-size: 5rem !important;
+}
+
+p{
+    /* color: white; */
+    font-size: 1.3rem;
+}
+
+
+/* ***************************************************** */
+
+
+
+/* **************** Header Starts **************** */
+
+
+.header{
+    width: 100%;
+    height: 100vh;
+    padding: 0 8%;
+    /* background-color: rgb(5, 6, 26); */
+    background-image: linear-gradient(54deg, rgba(5, 6, 26, 0.96) 38%, rgba(236, 140, 105, 0.95) 90%);
+    position: relative;
+    /* clip-path: polygon(0% 0%, 100% 0%, 100% 75%,50% 100%,0% 75%); */
+    position: relative;
+    z-index: 0;
+}
+
+nav{
+    display: flex !important;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    width: 140px;
+}
+
+.nav-link{
+    padding: 28px 0;
+    margin-top: -28px;
+}
+
+.nav-link li{
+    display: inline;
+    margin: 0 15px;
+}
+
+.nav-link li a{
+    text-decoration: none;
+    color: white;
+    padding: 5px 0;
+    position: relative;
+}
+
+.nav-link li a::after{
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 2px;
+    background-color: brown;
+    bottom: 0;
+    left: 0;
+    transition: width 0.5s;
+}
+
+.nav-link li a:hover::after{
+    width: 100%;
+}
+
+.main-header{
+    /* position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%); */
+    transform: translateY(30%);
+}
+
+.main-header h1{
+    display: inline-block;
+    transform: translateX(-10%);
+    margin-top: -10px;
+    background: linear-gradient(to right, #f32170, #ffeb07, #2196f3, #ff00eb);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+
+}
+
+.main-header p{
+    color: white;
+    font-size: 1.5rem;
+}
+
+
+
+
+/* **************** Text Typing Animation Starts **************** */
+
+.wrapper{
+    display: flex;
+}
+
+.wrapper .static-txt{
+    color: #fff;
+    font-size: 1.2rem;
+    margin-top: 2px;
+}
+
+.wrapper .dynamic-txts{
+    margin-left: 15px;
+    height: 35px;
+    line-height: 35px;
+    overflow: hidden;
+}
+
+.dynamic-txts li{
+    list-style: none;
+    color: #FC6D6D;
+    font-size: 30px;
+    font-weight: bold;
+    position: relative;
+    top: 0;
+    margin-bottom: 5px;
+    animation: slide 12s steps(4) infinite;
+}
+
+@keyframes slide {
+    100%{
+       top: -160px;
+    }
+}
+
+.dynamic-txts li span{
+    position: relative;
+    line-height: 35px;
+}
+
+.dynamic-txts li span::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 101%;
+    background: rgba(15, 15, 35, 1);
+    border-left: 2px solid #FC6D6D;
+    animation: typing 3s steps(16) infinite;
+}
+
+@keyframes typing {
+    40%, 60%{
+      left: calc(100% + 30px);
+    }
+    100%{
+      left: 0;
+    }
+}
+
+/* **************** Text Typing Animation Ends **************** */
+
+
+/* .main-header a{
+    display: inline-block;
+    text-decoration: none;
+    background-color: #FC6D6D;
+    color: #fff;
+    border-radius: 8px;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: 2px solid #FC6D6D;
+}
+
+.main-header a:hover{
+    background-color: transparent;
+    color: #FC6D6D;
+    border: 2px solid #FC6D6D;
+    box-shadow: 5px 5px 0px 0px #fc6d6d88;
+} */
+
+
+.main-header a{
+    font-weight: 500;
+    border-radius: 25px;
+    border-width: 3px;
+    /* box-shadow: ; */
+    transition: all 0.4s ease-in-out;
+}
+
+.main-header a:hover{
+    box-shadow: 8px 7px 12px -4.5px #ba4242, inset 28px 20px 18px -9px #ba4242;
+    text-shadow: 1px 1px 20px rgb(235, 203, 203);
+}
+
+.wave{
+    position: absolute;
+    bottom: -12%;
+    left: 0%;
+    z-index: -1;
+}
+
+.phoneImage{
+    position: absolute;
+    width: 330px;
+    height: 520px;
+    right: -2%;
+    top: -55%;
+    z-index: 1;
+    opacity: 0.9;
+    /* box-shadow: -2px 18px 20px -5px #6d6c6c; */
+    transition: all 0.5s ease-in-out;
+}
+
+.phoneImage:hover{
+    top: -67%;
+    right: -5%;
+}
+
+.circle1{
+    position: absolute;
+    left: 30%;
+    bottom: 2%;
+    width: 250px;
+    height: 250px;
+    background: rgba(238, 130, 238, 0.2);
+    /* background: transparent; */
+    border-radius: 50%;
+    backdrop-filter: blur(22px);
+    box-shadow: 0px 15px 25px 2px rgba(0, 0, 0, 0.4);
+    
+}
+
+.circle2{
+    position: absolute;
+    left: 42%;
+    bottom: 30%;
+    width: 180px;
+    height: 180px;
+    background: rgba(75, 0, 130, 0.2);
+    /* background: transparent; */
+    border-radius: 50%;
+    backdrop-filter: blur(20px);
+    box-shadow: 0px 15px 25px 2px rgba(0, 0, 0, 0.4);
+}
+
+.circle3{
+    position: absolute;
+    left: 48%;
+    bottom: 53%;
+    width: 140px;
+    height: 140px;
+    background: rgba(0, 0, 255, 0.15);
+    /* background: transparent; */
+    border-radius: 50%;
+    backdrop-filter: blur(20px);
+    box-shadow: 0px 15px 25px 2px rgba(0, 0, 0, 0.4);
+}
+
+.circle4{
+    position: absolute;
+    left: 50%;
+    bottom: 72%;
+    width: 100px;
+    height: 100px;
+    background: rgba(0, 255, 0, 0.1);
+    /* background: transparent; */
+    border-radius: 50%;
+    backdrop-filter: blur(20px);
+    box-shadow: 0px 15px 25px 2px rgba(0, 0, 0, 0.4);
+}
+
+.circle5{
+    position: absolute;
+    left: 50%;
+    bottom: 86%;
+    width: 60px;
+    height: 60px;
+    background: rgba(255 ,255 ,0 , 0.1);
+    /* background: transparent; */
+    border-radius: 50%;
+    backdrop-filter: blur(20px);
+    box-shadow: 0px 15px 25px 2px rgba(0, 0, 0, 0.4);
+}
+
+.circle6{
+    position: absolute;
+    left: 49%;
+    bottom: 93%;
+    width: 30px;
+    height: 30px;
+    background: rgba(255 ,165 ,0 , 0.1);
+    /* background: transparent; */
+    border-radius: 50%;
+    backdrop-filter: blur(20px);
+    box-shadow: 0px 15px 25px 2px rgba(0, 0, 0, 0.4);
+}
+
+.circle7{
+    position: absolute;
+    left: 48.3%;
+    bottom: 96%;
+    width: 18px;
+    height: 18px;
+    background: rgba(255, 0, 0, 0.1);
+    /* background: transparent; */
+    border-radius: 50%;
+    backdrop-filter: blur(20px);
+    box-shadow: 0px 15px 25px 2px rgba(0, 0, 0, 0.4);
+}
+
+.circle8{
+    position: absolute;
+    left: 5.7%;
+    top: -8%;
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.02);
+    /* background: transparent; */
+    border-radius: 50%;
+    backdrop-filter: blur(0.1px);
+    box-shadow: 0px 15px 25px 2px rgba(0, 0, 0, 0.4);
+}
+
+
+/* **************** Header Ends **************** */
+
+
+
+
+/* **************** About Starts **************** */
+
+.about{
+    margin-top: 60px;
+    margin-left: 120px;
+    margin-right: 120px;
+    height: 100vh;
+}
+
+
+.about h2{
+    text-align: center;
+    font-size: 3rem;
+    /* font-weight: 600; */
+}
+
+.about > p{
+    text-align: center;
+    margin-top: -18px;
+    color: rgb(221, 9, 9);
+    font-weight: 600;
+}
+
+.about img{
+    height: 400px;
+}
+
+.about .content{
+    display: flex;
+    align-items: center;
+    margin-top: 35px;
+}
+
+.about .content div{
+    margin-left: 150px;
+}
+
+.about .content h3{
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-right: 10px;
+}
+
+.about .content p{
+    margin: 25px 0;
+    font-size: 1.1rem;
+    text-align: justify;
+}
+
+.content{
+    position: relative;
+}
+
+
+/* **************** Text Typing Animation Starts **************** */
+
+.wrapper2{
+    display: flex;
+    position: absolute;
+    right: 12.8%;
+    top: 9%;
+}
+
+.wrapper2 .dynamic-txts2{
+    /* margin-left: 15px; */
+    height: 35px;
+    line-height: 35px;
+    overflow: hidden;
+}
+
+.dynamic-txts2 li{
+    list-style: none;
+    color: #d13333;
+    font-size: 30px;
+    font-weight: bold;
+    position: relative;
+    top: 0;
+    margin-bottom: 5px;
+    animation: slide 12s steps(4) infinite;
+}
+
+@keyframes slide {
+    100%{
+       top: -160px;
+    }
+}
+
+.dynamic-txts2 li span{
+    position: relative;
+    line-height: 35px;
+}
+
+.dynamic-txts2 li span::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 101%;
+    background: rgb(255, 255, 255);
+    border-left: 2px solid #FC6D6D;
+    animation: typing 3s steps(16) infinite;
+}
+
+@keyframes typing {
+    40%, 60%{
+      left: calc(100% + 30px);
+    }
+    100%{
+      left: 0;
+    }
+}
+
+/* **************** Text Typing Animation Ends **************** */
+
+/* .buttonCV{
+    text-decoration: none;
+    color: #ba4242;
+} */
+
+.buttonCV{
+    background-color: #d13333;
+    color: #fff;
+    border-radius: 10px;
+    padding: 13px 25px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: all 0.4s ease-in-out;
+}
+
+.buttonCV:hover{
+    text-decoration: none;
+    background-color: transparent;
+    color: #d13333;
+    border: 2px solid #d13333;
+    box-shadow: 10px 10px 12px -4.5px #ba4242, inset 18px 20px 18px -9px #ba4242;
+    text-shadow: 0 0 4px #fff;
+}
+
+
+
+
+/* **************** About Ends **************** */
+
